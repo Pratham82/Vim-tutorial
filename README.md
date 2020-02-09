@@ -379,7 +379,7 @@ Redo last change - Ctrl + r
 ```
 "3p
 ```
-**Named register:**
+**2. Named register:**
 ```
 cyy
 ```
