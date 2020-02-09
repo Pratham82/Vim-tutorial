@@ -2,20 +2,20 @@
 This is file contains all the instructions that will require for learning vim.
 
 ## Contents
-### 1. Basics  
-### 2. Navigation  
-### 3. Help system  
-### 4. Deleting text  
-### 5. Putting text  
-### 6. Yanking text  
-### 7. Undo redo  
-### 8. Registers  
-### 9. Inserting text  
-### 10. Replacing text  
-### 11. Lower case or upper case  
-### 12. Joining text
-### 13. Searching & Finding text 
-### 14. Substituting text
+#### 1. Basics  
+#### 2. Navigation  
+#### 3. Help system  
+#### 4. Deleting text  
+#### 5. Putting text  
+#### 6. Yanking text  
+#### 7. Undo redo  
+#### 8. Registers  
+#### 9. Inserting text  
+#### 10. Replacing text  
+#### 11. Lower case or upper case  
+#### 12. Joining text
+#### 13. Searching & Finding text 
+#### 14. Substituting text
 
 ### 1.Basics:
 -----------------------------------------------------------
