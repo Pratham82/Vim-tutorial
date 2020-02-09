@@ -440,11 +440,25 @@ o
 O
 ```
 
-Repeat the command
-[count]operation[word/character]esc
-- 12iHold + esc (This command will create single line containing hold 12 times)
-- 12oHold + esc (This command will create 12 lines containing hold, below the cursor )
-- 12OHold + esc (This command will create 12 lines containing hold, above the cursor )
+**Repeat the command**
+***[count]operation[word/character]esc***
+```
+12iHold + esc 
+```
+***(This command will create single line containing hold 12 times)***
+
+```
+12oHold + esc 
+```
+
+***(This command will create 12 lines containing hold, below the cursor )***
+
+```
+12OHold + esc 
+```
+
+***(This command will create 12 lines containing hold, above the cursor )***
+
 
 ### 10. Replace mode
 -------------------------------------------------------------
@@ -730,20 +744,29 @@ d/hire
 :s#old/variable#new/variable#
 ```
 **Summary for substituting**
+
 **1. Same line search** 
 
 ***f{char} - Forward search***
+
 ***F{char} - Reverse search***
+
 ***t{char} - Forward search till***
+
 ***T{char} - Reverse search till***
+
 ***; - Repeat in the same direction***
+
 ***, - Repeat in the opposite direction***
 
 **2. For whole file**
 
 ***/{pattern} - Forward search***
+
 ***?{pattern} - Reverse search***
+
 ***n - Repeat in the same direction***
+
 ***N - Repeat in the opposite direction***
-**` *  Forward search for word***
+
 ***#- Reverse search for word***
