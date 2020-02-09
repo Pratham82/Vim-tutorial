@@ -240,16 +240,24 @@ dd
 ``` 
 .
 ```
+
 **Some combinations of operators and motion with counts**
 ***
+
 ***[count]operation {motion}***
+
 ***5dw***
+
 ***5 = The count/ how many time to repeat***
+
 ***dw = The command(Delete word)***
 
 ***[count]operation[count] {motion}***
+
 ***3w = Repeat word motion 3 times.***
+
 ***d3w = Delete the 3w motion.***
+
 ***2d3w = Delete 3 words motion 2 times.***
 
 ### 5. Putting
@@ -273,9 +281,13 @@ p
 ``` 
 P
 ```
+
 ***Standard vs. Vim***
+
 ***cut - delete***
+
 ***copy - yank***
+
 ***paste - put***
 
 ### 6. Yanking
@@ -343,12 +355,18 @@ Redo last change - Ctrl + r
 ***Registers are storage locations***
 
 **1. Unnamed ("")**
+
 **2. Numbered ("0... "9)**
+
 **3. Named ("a..."z)**
 
+
 ***"" holds text from d,c,s,x and y operations.***
+
 ***"0 holds last text yanked (y).***
+
 ***"1 holds last text deleted d ot changed c.***
+
 ***Numbered registers shift with each d or c.***
 
 **Check all registers**
@@ -356,12 +374,16 @@ Redo last change - Ctrl + r
 :reg 
 ```
 **Check specific register**
+
 ***:reg[register name]***
+
 ```
 :reg d
 ```
 **List multiple registers- **
+
 ***:reg[register(s)]***
+
 ```
 :reg ghf
 ```
@@ -370,7 +392,9 @@ Redo last change - Ctrl + r
 "0p
 ```
 **Delete text without affecting normal registers:** 
+
 ***(black hole register)***
+
 ```
 "_d
 ```
@@ -383,22 +407,32 @@ Redo last change - Ctrl + r
 ```
 cyy
 ```
+
 ***Yank a line to a specific register***
+
 ***"[register name]operation***
+
 ```
 "ayy
 ```
+
 ***Put the specific deleted, yanked or changed text to a register***
+
 ```
 "ap
 ```
+
 ***For appending a line to already filled register:***
+
 ***"[Upper case of that alphabet]operation***
+
 ```
 "Ayy 
 ```
 Repeating with registers:
+
 ***[count][register]operator***
+
 ```
 4"gp
 ```
@@ -441,7 +475,9 @@ O
 ```
 
 **Repeat the command**
+
 ***[count]operation[word/character]esc***
+
 ```
 12iHold + esc 
 ```
@@ -473,7 +509,9 @@ r
 ```
 **c stands for change**
 **Replace single word with one word or multiple words-  **
+
 ***(change word)***
+
 ```
 cw
 ```
@@ -538,9 +576,13 @@ guu
 ```
 J
 ```
+
 ***If there is space after first line it will append 1 space.*** 
+
 ***If there is period. after first line it will append 2 spaces.***
+
 **Join lines without spaces**
+
 ```
 gJ
 ```
@@ -557,32 +599,43 @@ gJ
 **f stands for find** 
 **t stadnds for till**
 **Search forward to the cursor on the line** 
+
 ***f{character}*** 
+
 ```
 fd
 ```
 **Search backward to the cursor on the line**
+
 ***F{character}*** 
 ```
 Fd
 ```
 **Position cursor one position before given character**
+
 ***t{character}***
+
 ```
 tb 
 ```
 **Position cursor one position after given character**
+
 ***T{character}***
+
 ```
 Tb
 ```
 **Repeat forward search**
+
 ***[count]f{character}***
+
 ```
 3fa
 ``` 
 **Combining t with delete **
+
 ***[delete][till]{character}***
+
 ```
 dtp 
 ```
@@ -596,8 +649,11 @@ dtp
 ```
 
 **13.2 Search for entire word or series of characters**
+
 **Search for entire word or series of characters in same direction of cursor**
+
 ***: /{word/characters}***
+
 ```
 /dog + Enter
 ```
@@ -632,6 +688,7 @@ n
 ```
 
 **Search backward from current cursor position**
+
 ***?{word/characters}***  
 ```
 ?and + enter
@@ -648,7 +705,9 @@ N
 ```
  *
 ```
+
 ****will match the entire word and skips the word containing same characters.***
+
 **Repeat forward search in same direction**
 ```
  */n
@@ -662,7 +721,9 @@ N
 #
 ```
 **Delete from current cursor position till search result**
+
 ***[delete]/{word/characters}***
+
 ```
 d/hire
 ```
@@ -672,74 +733,98 @@ d/hire
 **s stands for substituting**
 
 **To change the word in the current line from old to new**
+
 ***:[substitute]/{old word}/{new word}***
+
 ```
  :s/cpu/CPU 
 ```
 
 ***[flags] - :s/{old}/{new}/[flag]***
+
 **To change the word in the current line from old to new with flags**
+
 ***:[substitute]/{old word}/{new word}/[flags]***
+
 ```
 :s/cpu/CPU/h 
 ```
 
 **To change every occurrence of the word on the same line from old to new with global flag** 
+
 ***:[substitute]/{old word}/{new word}/g***
+
 ```
 :s/cpu/CPU/g
 ```
 
 ***[range] - :[range]s/{old}/{new}/[flags]***
+
 **Default range is current line, thats why our substitution occurs on the same line only**
+
 **Range is one or more line specifier separated by , or ;**
 
 **Ranges:**
 **1. Line no**
 
 **For a single line**
+
 ***:[line no.][substitute]/{old word}/{new word}/[flags]***
+
 ```
 :41s/luke/duke/g
 ```
 
 **For multiple lines (It will operate on given line range)**
+
 ***:[starting line no. , ending line no.][substitute]/{old word}/{new word}/[flags]***
+
 ```
  :10,20s/Mark/Dark/g
  ```
 
 **Special characters:**
+
 ***$ =last line , . = current line , % all lines(entire file) =(1,$)***
 
 **Operate from current line till the line**
+
 ***:[current line, last line.][substitute]/{old word}/{new word}/[flags]***
+
 ```
  :.,$s/Mark/Dark/g
  ```
 
 **Operate on all lines** 
+
 ***:[all lines][substitute]/{old word}/{new word}/[flags]***
+
 ```
 :%s/python2/python3/g 
 ```
 
 **Operate on specific pattern**
+
  ***:[/Pattern -1/],[/Pattern -2/][substitute]/{old word}/{new word}/[flags]***
+
 ```
 :/Global/,/Local/s/net/org/g
 ```
 ***This will change net from org between our search pattern***
 
 **Combine search patterns with line number/ special characters**
+
 ***:[/Pattern - 1],$[substitute]/{old word}/{new word}/[flags]***
 ```
 :/Local/s/net/org/g
 ```
 
 **Change the patterns on current line and all its occurrences**
+
 ***pattern separators | , # + - =***
+
 ***:[substitute][pattern separator][old pattern][pattern separator][new pattern][pattern separator]*** 
+
 ```
 :s#old/variable#new/variable#
 ```
