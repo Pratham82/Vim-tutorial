@@ -17,7 +17,7 @@ This is file contains all the instructions that will require for learning vim.
 #### 13. Searching & Finding text 
 #### 14. Substituting text
 
-### 1.Basics:
+### 1. Basics:
 -----------------------------------------------------------
 **Normal mode/Command mode** 
 ```
@@ -48,7 +48,7 @@ q
  vim filename.extension
  ```
 
-### Navigation
+### 2. Navigation
 -----------------------------------------------------------
 **Move down**
  ```
@@ -122,7 +122,7 @@ Ctrl + g
 ``` 
 z + enter
 ``` 
-###Help system
+### 3. Help system
 -----------------------------------------------------
 **Open help file**
 ``` 
@@ -172,7 +172,7 @@ tab
 :q
 ```
 
-###Deleting text
+### 4. Deleting text
 ---------------------------------------------------
 **d: stands for delete**
 **Delete character at current cursor position** 
@@ -252,7 +252,7 @@ dd
 ***d3w = Delete the 3w motion.***
 ***2d3w = Delete 3 words motion 2 times.***
 
-### Putting
+### 5. Putting
 --------------------------------------------------
 **p:  stands for put/paste**
 **1. For characters or words**
@@ -278,7 +278,7 @@ P
 ***copy - yank***
 ***paste - put***
 
-### Yanking
+### 6. Yanking
 --------------------------------------------------------------
 **y: stands for yank**
 **Copy word after the cursor**
@@ -331,12 +331,12 @@ yy
 ```
 4yy
 ```
-###Undo & redo
+### 7. Undo & redo
 -----------------------
 Undo last change - u
 Redo last change - Ctrl + r
 
-Registers
+###8. Registers
 ------------------------------------------------
 **reg stands for register**
 
