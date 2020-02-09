@@ -336,7 +336,7 @@ yy
 Undo last change - u
 Redo last change - Ctrl + r
 
-###8. Registers
+### 8. Registers
 ------------------------------------------------
 **reg stands for register**
 
