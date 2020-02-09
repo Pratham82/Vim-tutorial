@@ -2,22 +2,22 @@
 This is file contains all the instructions that will require for learning vim.
 
 ## Contents
-### 1. Basics  
-### 2. Navigation  
-### 3. Help system  
-### 4. Deleting text  
-### 5. Putting text  
-### 6. Yanking text  
-### 7. Undo redo  
-### 8. Registers  
-### 9. Inserting text  
-### 10. Replacing text  
-### 11. Lower case or upper case  
-### 12. Joining text
-### 13. Searching & Finding text 
-### 14. Substituting text
+#### 1. Basics  
+#### 2. Navigation  
+#### 3. Help system  
+#### 4. Deleting text  
+#### 5. Putting text  
+#### 6. Yanking text  
+#### 7. Undo redo  
+#### 8. Registers  
+#### 9. Inserting text  
+#### 10. Replacing text  
+#### 11. Lower case or upper case  
+#### 12. Joining text
+#### 13. Searching & Finding text 
+#### 14. Substituting text
 
-### 1.Basics:
+### 1. Basics:
 -----------------------------------------------------------
 **Normal mode/Command mode** 
 ```
@@ -48,7 +48,7 @@ q
  vim filename.extension
  ```
 
-### Navigation
+### 2. Navigation
 -----------------------------------------------------------
 **Move down**
  ```
@@ -122,7 +122,7 @@ Ctrl + g
 ``` 
 z + enter
 ``` 
-###Help system
+### 3. Help system
 -----------------------------------------------------
 **Open help file**
 ``` 
@@ -172,7 +172,7 @@ tab
 :q
 ```
 
-###Deleting text
+### 4. Deleting text
 ---------------------------------------------------
 **d: stands for delete**
 **Delete character at current cursor position** 
@@ -252,7 +252,7 @@ dd
 ***d3w = Delete the 3w motion.***
 ***2d3w = Delete 3 words motion 2 times.***
 
-### Putting
+### 5. Putting
 --------------------------------------------------
 **p:  stands for put/paste**
 **1. For characters or words**
@@ -278,7 +278,7 @@ P
 ***copy - yank***
 ***paste - put***
 
-### Yanking
+### 6. Yanking
 --------------------------------------------------------------
 **y: stands for yank**
 **Copy word after the cursor**
@@ -331,12 +331,12 @@ yy
 ```
 4yy
 ```
-###Undo & redo
+### 7. Undo & redo
 -----------------------
 Undo last change - u
 Redo last change - Ctrl + r
 
-Registers
+### 8. Registers
 ------------------------------------------------
 **reg stands for register**
 
@@ -407,3 +407,343 @@ Repeating with registers:
 "g4p
 ```
 It  will paste the text yanked in register p 4 times 
+
+### 9. Inserting
+-------------------------------------------------------
+** i stands for insert**
+**Insert mode**
+```
+i
+```
+**Insert text before current cursor position**
+```
+i
+```
+**Go to the first non blank character in line and insert mode**
+```
+I
+```
+**Insert text after current cursor position**
+```
+a
+```
+**Go to the last non blank character in line and insert mode**
+```
+A
+```
+**Insert text below the cursor**
+```
+o
+```
+**Insert text above the cursor**
+```
+O
+```
+
+Repeat the command
+[count]operation[word/character]esc
+- 12iHold + esc (This command will create single line containing hold 12 times)
+- 12oHold + esc (This command will create 12 lines containing hold, below the cursor )
+- 12OHold + esc (This command will create 12 lines containing hold, above the cursor )
+
+### 10. Replace mode
+-------------------------------------------------------------
+**r stnads for replace**
+**Enable replace mode (Whatever we write will be overwrite the existing text)**
+```
+R
+```
+**Replace single character**
+```
+r
+```
+**c stands for change**
+**Replace single word with one word or multiple words-  **
+***(change word)***
+```
+cw
+```
+**Replace from current cursor position to the end of the line - **
+```
+c$ / C
+```
+**Replace from current cursor position to the star of the line**
+```
+c0
+```
+**Replace whole line** 
+```
+cc
+```
+**Using it multiple times**
+***[count]cc***
+```
+3cc
+```
+
+### 11. Lowercase & Uppercase
+------------------------------------------------------------------
+**Change the case of character below cursor**
+```
+~
+```
+**g  stands for global**
+**Change the case of the word**
+```
+g~w
+```
+**Change the case of the line from current cursor position**
+```
+g~$
+```
+**Change the case of the whole line**
+```
+g~~
+```
+**Make every character in a word uppercase**
+```
+gUw 
+```
+**Make every whole line uppercase**
+```
+gUU
+```
+**Make every character in a word lowercase**
+```
+guw
+```
+**Make every whole line lowercase**
+```
+guu
+```
+
+### 12. Join
+--------------------------
+**J stands join**
+**Join lines(go t first line)**
+```
+J
+```
+***If there is space after first line it will append 1 space.*** 
+***If there is period. after first line it will append 2 spaces.***
+**Join lines without spaces**
+```
+gJ
+```
+**Join multiple lines**
+***[count]J***
+ ```
+ 4J
+```
+
+### 13. Search find and replace
+---------------------------------------------------------
+
+**find single character in a line**
+**f stands for find** 
+**t stadnds for till**
+**Search forward to the cursor on the line** 
+***f{character}*** 
+```
+fd
+```
+**Search backward to the cursor on the line**
+***F{character}*** 
+```
+Fd
+```
+**Position cursor one position before given character**
+***t{character}***
+```
+tb 
+```
+**Position cursor one position after given character**
+***T{character}***
+```
+Tb
+```
+**Repeat forward search**
+***[count]f{character}***
+```
+3fa
+``` 
+**Combining t with delete **
+***[delete][till]{character}***
+```
+dtp 
+```
+**Repeat forward search in same direction**
+``` 
+;
+```
+**Repeat forward search in opposite direction** 
+```
+,
+```
+
+**13.2 Search for entire word or series of characters**
+**Search for entire word or series of characters in same direction of cursor**
+***: /{word/characters}***
+```
+/dog + Enter
+```
+**Repeat forward search in same direction**
+```
+n
+```
+**Repeat forward search in opposite direction**
+```
+N
+```
+
+***Performing search and replace word common pattern***
+**Find word and** 
+***/{word/characters} ***
+```
+/and
+```
+**Change the word and to &**
+*** [change][word]{new word} ***
+```
+cw& + esc
+```
+**Go to the next occurrence of and**
+***[next]***
+```
+n
+```
+**Repeat previous command**
+```
+.
+```
+
+**Search backward from current cursor position**
+***?{word/characters}***  
+```
+?and + enter
+```
+**Repeat backward search in same direction**
+```
+n
+```
+**Repeat backward search in opposite direction**
+```
+N
+```
+**Search forward for occurrence of the word under /near the cursor**
+```
+ *
+```
+****will match the entire word and skips the word containing same characters.***
+**Repeat forward search in same direction**
+```
+ */n
+ ```
+**Repeat forward search in opposite direction**
+```
+N
+```
+**Search backward for occurrence of the word under /near the cursor**
+```
+#
+```
+**Delete from current cursor position till search result**
+***[delete]/{word/characters}***
+```
+d/hire
+```
+
+### 14. Substituting
+---
+**s stands for substituting**
+
+**To change the word in the current line from old to new**
+***:[substitute]/{old word}/{new word}***
+```
+ :s/cpu/CPU 
+```
+
+***[flags] - :s/{old}/{new}/[flag]***
+**To change the word in the current line from old to new with flags**
+***:[substitute]/{old word}/{new word}/[flags]***
+```
+:s/cpu/CPU/h 
+```
+
+**To change every occurrence of the word on the same line from old to new with global flag** 
+***:[substitute]/{old word}/{new word}/g***
+```
+:s/cpu/CPU/g
+```
+
+***[range] - :[range]s/{old}/{new}/[flags]***
+**Default range is current line, thats why our substitution occurs on the same line only**
+**Range is one or more line specifier separated by , or ;**
+
+**Ranges:**
+**1. Line no**
+
+**For a single line**
+***:[line no.][substitute]/{old word}/{new word}/[flags]***
+```
+:41s/luke/duke/g
+```
+
+**For multiple lines (It will operate on given line range)**
+***:[starting line no. , ending line no.][substitute]/{old word}/{new word}/[flags]***
+```
+ :10,20s/Mark/Dark/g
+ ```
+
+**Special characters:**
+***$ =last line , . = current line , % all lines(entire file) =(1,$)***
+
+**Operate from current line till the line**
+***:[current line, last line.][substitute]/{old word}/{new word}/[flags]***
+```
+ :.,$s/Mark/Dark/g
+ ```
+
+**Operate on all lines** 
+***:[all lines][substitute]/{old word}/{new word}/[flags]***
+```
+:%s/python2/python3/g 
+```
+
+**Operate on specific pattern**
+ ***:[/Pattern -1/],[/Pattern -2/][substitute]/{old word}/{new word}/[flags]***
+```
+:/Global/,/Local/s/net/org/g
+```
+***This will change net from org between our search pattern***
+
+**Combine search patterns with line number/ special characters**
+***:[/Pattern - 1],$[substitute]/{old word}/{new word}/[flags]***
+```
+:/Local/s/net/org/g
+```
+
+**Change the patterns on current line and all its occurrences**
+***pattern separators | , # + - =***
+***:[substitute][pattern separator][old pattern][pattern separator][new pattern][pattern separator]*** 
+```
+:s#old/variable#new/variable#
+```
+**Summary for substituting**
+**1. Same line search** 
+
+***f{char} - Forward search***
+***F{char} - Reverse search***
+***t{char} - Forward search till***
+***T{char} - Reverse search till***
+***; - Repeat in the same direction***
+***, - Repeat in the opposite direction***
+
+**2. For whole file**
+
+***/{pattern} - Forward search***
+***?{pattern} - Reverse search***
+***n - Repeat in the same direction***
+***N - Repeat in the opposite direction***
+**` *  Forward search for word***
+***#- Reverse search for word***
