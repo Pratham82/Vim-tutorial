@@ -92,7 +92,7 @@ W (Ignores punctuation)
 0
 ``` 
 
-**Go to first character ** 
+**Go to first character** 
 ``` 
  ^ (shift 6)
 ``` 
